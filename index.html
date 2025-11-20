@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 40px 20px;
-            background-color: #f8f9fa; /* Light background */
+            background-color: #f8f9fa; /* Light, neutral background */
             color: #343a40;
             line-height: 1.6;
         }
@@ -19,7 +19,7 @@
             margin: 0 auto;
         }
         
-        /* Header and Introduction */
+        /* Header and Introduction (More Human & Professional) */
         header {
             text-align: center;
             padding: 40px 0;
@@ -29,13 +29,15 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         header h1 {
-            color: #007bff;
+            color: #007bff; /* Primary Accent Color */
             margin-bottom: 8px;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            font-weight: 700;
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #5a6268;
+            font-weight: 400;
         }
         .social-links {
             margin-top: 15px;
@@ -43,14 +45,16 @@
         .social-links a {
             color: #007bff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 18px;
             font-weight: 600;
+            transition: color 0.3s;
         }
         .social-links a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
 
-        /* Project Grid and Cards */
+        /* Project Grid and Cards (Better Layout) */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -62,25 +66,32 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex; /* Use flex to keep button at the bottom */
+            flex-direction: column;
         }
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         .project-card h2 {
-            color: #28a745;
+            color: #28a745; /* Secondary Accent Color */
             font-size: 1.5em;
             margin-top: 0;
             padding-bottom: 10px;
             border-bottom: 2px solid #e9ecef;
         }
         .tools {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #6c757d;
             margin-bottom: 15px;
+            font-weight: 500;
         }
         .description {
             margin-bottom: 20px;
+            flex-grow: 1; /* Pushes the links section to the bottom */
+        }
+        .links {
+            margin-top: auto; /* Ensures links stick to the bottom */
         }
         .links a {
             display: inline-block;
@@ -103,8 +114,10 @@
     <div class="container">
         <header>
             <h1>Sree Vaishnav Karnati</h1>
-            <p>Data Analyst | Bridging **Insights** and **Business Strategy**</p>
-            <div class="social-links">|
+            <p>Data Analyst | Bridging **Actionable Insights** and **Business Strategy**</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/YOUR-LINKEDIN-URL" target="_blank">LinkedIn</a>
+                |
                 <a href="https://github.com/sreekarnati" target="_blank">GitHub Profile</a>
             </div>
         </header>
@@ -113,7 +126,7 @@
 
             <div class="project-card">
                 <h2>Superstore Profit & Sales Analysis</h2>
-                <p class="tools">Tools: Tableau (Visualization), Excel (Data Prep), SQL Concepts</p>
+                <p class="tools">Skills: Tableau (Visualization), Business Analysis, Data Prep</p>
                 <p class="description">A comprehensive business intelligence dashboard focused on identifying **root causes** of stagnant profit. The analysis uncovered critical geographical and product-level loss centers (e.g., Texas, Tables) and resulted in actionable strategies for pricing and loss mitigation.</p>
                 <div class="links">
                     <a href="https://public.tableau.com/app/profile/sree.vaishnav.karnati/viz/SuperstoreProfitSalesAnalysis_17636556003760/SuperstoreSalesDashboard?publish=yes" target="_blank">View Live Dashboard</a>
@@ -123,7 +136,7 @@
 
             <div class="project-card">
                 <h2>Walmart Weekly Sales Forecasting</h2>
-                <p class="tools">Tools: Python (Pandas, Matplotlib), Facebook **Prophet**, Scikit-learn</p>
+                <p class="tools">Skills: Python (Pandas, Matplotlib), Time-Series Forecasting (Prophet), Scikit-learn</p>
                 <p class="description">Advanced time-series analysis to predict weekly sales across 45 Walmart stores. The solution involved deep feature engineering, applying the **Prophet** model for complex seasonality (holidays), and delivering a validated forecast with strategic recommendations for inventory and marketing alignment.</p>
                 <div class="links">
                     <a href="https://github.com/sreekarnati/Walmart_sales_Forecasting" target="_blank">View Code & Notebook</a>
@@ -132,8 +145,8 @@
 
             <div class="project-card">
                 <h2>Titanic Survival Exploratory Data Analysis</h2>
-                <p class="tools">Tools: Python (Pandas, Seaborn, Matplotlib)</p>
-                <p class="description">A foundational EDA project focused on identifying key factors influencing survival rates. The analysis confirmed strong correlations between survival and **socio-economic factors** like Passenger Class, Sex, and Fare, demonstrating proficiency in data cleaning, visualization, and hypothesis testing.</p>
+                <p class="tools">Skills: Python (Pandas, Seaborn, Matplotlib), Hypothesis Testing, Data Visualization</p>
+                <p class="description">A foundational EDA project focused on identifying key factors influencing survival rates. The analysis confirmed strong correlations between survival and **socio-economic factors** (Class, Sex, Fare), demonstrating proficiency in data cleaning, visualization, and hypothesis testing.</p>
                 <div class="links">
                     <a href="https://github.com/sreekarnati/Titanic_EDA" target="_blank">View Code & Notebook</a>
                 </div>
@@ -141,7 +154,7 @@
 
             <div class="project-card">
                 <h2>Netflix Content Trends Analysis</h2>
-                <p class="tools">Tools: Python (Pandas, Seaborn, Matplotlib)</p>
+                <p class="tools">Skills: Python (Pandas, Seaborn), Categorical Data Analysis, Data Wrangling</p>
                 <p class="description">An analysis exploring the content strategy of Netflix, focusing on trends in genres, top directors, regional distribution, and content growth over time. This project demonstrates skills in handling categorical data, visualizing trends, and drawing **strategic insights** about library composition.</p>
                 <div class="links">
                     <a href="https://github.com/sreekarnati/Netflix_Shows_EDA" target="_blank">View Code & Notebook</a>
