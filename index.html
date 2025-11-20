@@ -5,60 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sree Vaishnav Karnati - Data Analyst Portfolio</title>
     <style>
+        /* General Styles for a Clean, Modern Look */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 40px;
-            background-color: #f4f7f6;
-            color: #333;
+            padding: 40px 20px;
+            background-color: #f8f9fa; /* Light background */
+            color: #343a40;
+            line-height: 1.6;
         }
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        
+        /* Header and Introduction */
         header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ddd;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         header h1 {
             color: #007bff;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 2.5em;
         }
         header p {
-            font-size: 1.1em;
-            color: #555;
+            font-size: 1.2em;
+            color: #5a6268;
         }
-        .project-section {
-            padding: 30px 0;
-            border-bottom: 1px dashed #eee;
+        .social-links {
+            margin-top: 15px;
         }
-        .project-section:last-child {
-            border-bottom: none;
+        .social-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
         }
-        .project-section h2 {
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Project Grid and Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h2 {
             color: #28a745;
+            font-size: 1.5em;
             margin-top: 0;
-            border-left: 5px solid #28a745;
-            padding-left: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
         }
         .tools {
-            font-style: italic;
-            color: #777;
+            font-size: 0.9em;
+            color: #6c757d;
             margin-bottom: 15px;
+        }
+        .description {
+            margin-bottom: 20px;
         }
         .links a {
             display: inline-block;
-            margin-right: 15px;
-            padding: 8px 15px;
+            margin-right: 10px;
+            padding: 10px 18px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9em;
             transition: background-color 0.3s;
         }
         .links a:hover {
@@ -70,33 +103,53 @@
     <div class="container">
         <header>
             <h1>Sree Vaishnav Karnati</h1>
-            <p>Data Analyst | Bridging Data Insights and Business Strategy</p>
-            <p> 
-                | 
-                <a href="https://github.com/sreekarnati" target="_blank" style="color: #007bff;">GitHub</a>
-            </p>
+            <p>Data Analyst | Bridging **Insights** and **Business Strategy**</p>
+            <div class="social-links">|
+                <a href="https://github.com/sreekarnati" target="_blank">GitHub Profile</a>
+            </div>
         </header>
 
-        <section class="project-section">
-            <h2>1. Superstore Profit & Sales Analysis (Tableau)</h2>
-            <p class="tools">Tools: Tableau, Google Sheets (Cleaning), Excel</p>
-            <p>A comprehensive analysis of four years of Superstore sales data to identify key trends, geographical weaknesses, and product categories dragging down profitability. The analysis provided actionable recommendations to the client regarding pricing and loss mitigation in high-loss states like Texas and Pennsylvania.</p>
-            <div class="links">
-                <a href="https://public.tableau.com/app/profile/sree.vaishnav.karnati/viz/SuperstoreProfitSalesAnalysis_17636556003760/SuperstoreSalesDashboard?publish=yes" target="_blank">View Live Dashboard</a>
-                
-                <a href="https://github.com/sreekarnati/Superstore_Sales_Analysis" target="_blank">View Project Code & README</a>
-            </div>
-        </section>
+        <section class="project-grid">
 
-        <section class="project-section">
-            <h2>2. Walmart Weekly Sales — Professional EDA & Forecasting (Python)</h2>
-            <p class="tools">Tools: Python (Pandas, Matplotlib, Seaborn), Facebook Prophet, Scikit-learn</p>
-            <p>A deep-dive Exploratory Data Analysis (EDA) and time-series forecasting project to predict weekly sales across 45 Walmart stores. The solution involved complex feature engineering, applying the **Prophet** model to capture robust seasonality (especially holidays), and delivering insights for inventory and marketing strategy.</p>
-            <div class="links">
-                <a href="https://github.com/sreekarnati/Walmart_Sales_Forecasting_Python" target="_blank">View Project Code & Notebook</a>
+            <div class="project-card">
+                <h2>Superstore Profit & Sales Analysis</h2>
+                <p class="tools">Tools: Tableau (Visualization), Excel (Data Prep), SQL Concepts</p>
+                <p class="description">A comprehensive business intelligence dashboard focused on identifying **root causes** of stagnant profit. The analysis uncovered critical geographical and product-level loss centers (e.g., Texas, Tables) and resulted in actionable strategies for pricing and loss mitigation.</p>
+                <div class="links">
+                    <a href="https://public.tableau.com/app/profile/sree.vaishnav.karnati/viz/SuperstoreProfitSalesAnalysis_17636556003760/SuperstoreSalesDashboard?publish=yes" target="_blank">View Live Dashboard</a>
+                    <a href="https://github.com/sreekarnati/Superstore-Profit-Sales-Analysis" target="_blank">View Code & Documentation</a>
+                </div>
             </div>
-        </section>
 
-        </div>
+            <div class="project-card">
+                <h2>Walmart Weekly Sales Forecasting</h2>
+                <p class="tools">Tools: Python (Pandas, Matplotlib), Facebook **Prophet**, Scikit-learn</p>
+                <p class="description">Advanced time-series analysis to predict weekly sales across 45 Walmart stores. The solution involved deep feature engineering, applying the **Prophet** model for complex seasonality (holidays), and delivering a validated forecast with strategic recommendations for inventory and marketing alignment.</p>
+                <div class="links">
+                    <a href="https://github.com/sreekarnati/Walmart_sales_Forecasting" target="_blank">View Code & Notebook</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2>Titanic Survival Exploratory Data Analysis</h2>
+                <p class="tools">Tools: Python (Pandas, Seaborn, Matplotlib)</p>
+                <p class="description">A foundational EDA project focused on identifying key factors influencing survival rates. The analysis confirmed strong correlations between survival and **socio-economic factors** like Passenger Class, Sex, and Fare, demonstrating proficiency in data cleaning, visualization, and hypothesis testing.</p>
+                <div class="links">
+                    <a href="https://github.com/sreekarnati/Titanic_EDA" target="_blank">View Code & Notebook</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2>Netflix Content Trends Analysis</h2>
+                <p class="tools">Tools: Python (Pandas, Seaborn, Matplotlib)</p>
+                <p class="description">An analysis exploring the content strategy of Netflix, focusing on trends in genres, top directors, regional distribution, and content growth over time. This project demonstrates skills in handling categorical data, visualizing trends, and drawing **strategic insights** about library composition.</p>
+                <div class="links">
+                    <a href="https://github.com/sreekarnati/Netflix_Shows_EDA" target="_blank">View Code & Notebook</a>
+                </div>
+            </div>
+
+        </section>
+        
+    </div>
 </body>
 </html>
