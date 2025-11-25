@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding meta descriptions for better SEO as requested -->
+    <meta name="description" content="Sree Karnati's data analyst portfolio, showcasing projects in Python, SQL, Tableau, and machine learning. Specializing in business strategy and data-driven insights.">
     <title>Sree Karnati - Data Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Lucide Icons for a clean, modern look -->
@@ -13,6 +14,7 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #333;
+            scroll-behavior: smooth; /* Added for smooth scrolling */
         }
         
         h1, h2, h3 {
@@ -54,6 +56,11 @@
             background-color: #2563eb;
             color: white;
         }
+
+        /* Mobile Menu Styles */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="text-gray-800 antialiased">
@@ -71,10 +78,21 @@
             <a href="https://docs.google.com/document/d/18b7CsI4v8F6g1BxgsyyoWe6lDtqWRKqp/edit?usp=sharing&ouid=112765783184896538048&rtpof=true&sd=true" target="_blank" class="btn-primary px-4 py-2 rounded-full text-sm font-semibold hidden sm:inline-block">
                 View Resume
             </a>
-            <!-- Mobile Menu Placeholder - Lucide Menu Icon -->
-            <button class="md:hidden text-gray-600 hover:text-blue-600 transition p-2 rounded-md">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 transition p-2 rounded-md">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-xl absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0" style="transition: transform 0.3s ease, opacity 0.3s ease;">
+             <div class="flex flex-col space-y-4 p-5">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium block text-lg">About</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium block text-lg">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium block text-lg">Contact</a>
+                <a href="https://docs.google.com/document/d/18b7CsI4v8F6g1BxgsyyoWe6lDtqWRKqp/edit?usp=sharing&ouid=112765783184896538048&rtpof=true&sd=true" target="_blank" class="btn-primary w-full text-center px-4 py-2 rounded-lg font-semibold">
+                    View Resume
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -94,10 +112,10 @@
                     <a href="#projects" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg shadow-xl">View My Work</a>
                     
                     <!-- Social Icons using Lucide -->
-                    <a href="https://www.linkedin.com/in/sreekarnati" target="_blank" class="text-3xl text-gray-400 hover:text-blue-600 transition hover:scale-110 p-2 rounded-full">
+                    <a href="https://www.linkedin.com/in/sreekarnati" target="_blank" class="text-3xl text-gray-400 hover:text-blue-600 transition hover:scale-110 p-2 rounded-full" aria-label="LinkedIn Profile">
                         <i data-lucide="linkedin"></i>
                     </a>
-                    <a href="https://github.com/sreekarnati" target="_blank" class="text-3xl text-gray-400 hover:text-gray-900 transition hover:scale-110 p-2 rounded-full">
+                    <a href="https://github.com/sreekarnati" target="_blank" class="text-3xl text-gray-400 hover:text-gray-900 transition hover:scale-110 p-2 rounded-full" aria-label="GitHub Profile">
                         <i data-lucide="github"></i>
                     </a>
                 </div>
@@ -106,32 +124,55 @@
             <!-- Photo/Visual Element -->
             <div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
                 <div class="w-64 h-64 sm:w-80 sm:h-80 bg-blue-200 rounded-full overflow-hidden shadow-2xl flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500 ease-out p-4">
-                    <!-- Using a generic placeholder for profile since you don't have a photo yet -->
-                    <img src="image/mountains.png" alt="Mountain Image" class="w-full h-full object-cover rounded-full">
+                    <!-- Added alt-text for accessibility -->
+                    <img src="image/mountains.png" alt="Decorative image of mountains in a circle" class="w-full h-full object-cover rounded-full">
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- About Me Section -->
+    <!-- === (UPDATED) About Me Section === -->
     <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-blue-200 inline-block px-4 pb-2">About Me</h2>
+            <!-- Updated H2 to be more descriptive -->
+            <h2 class="text-3xl font-bold text-center mb-16">About Me: Analyst & Problem-Solver</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10">
                 
-                <!-- Core Philosophy -->
+                <!-- (UPDATED) Core Philosophy & Personal Narrative -->
                 <div class="md:col-span-2 text-lg text-gray-700 leading-relaxed space-y-6">
+
+                    <!-- New Sub-heading -->
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-3">
+                        <i data-lucide="compass" class="w-5 h-5 mr-2 text-blue-600"></i>
+                        My Professional Philosophy
+                    </h3>
                     <p>
                         My journey into data analytics started with a simple question: <em>"Why do some businesses thrive while others plateau?"</em> This curiosity led me to pursue a Master's in Data Analytics, where I learned that the answer often lies hidden in the numbers.
                     </p>
                     <p>
-                        I don't just build charts; I build narratives. Whether it's forecasting sales for a retail giant or uncovering market strategies, my goal is always to provide <strong>actionable intelligence</strong> that stakeholders can use immediately to drive tangible results.
+                        I approach every challenge as a puzzle. I don't just build charts; I build narratives. My goal is to move beyond just presenting data and instead provide <strong>actionable intelligence</strong> that stakeholders can use immediately to drive tangible results.
                     </p>
-                    <p class="italic text-sm text-gray-500 pt-2">
-                        When I'm not writing SQL queries or refining Tableau dashboards, you can find me hiking the local trails. I believe that diverse interests fuel the creativity needed to solve complex data problems.
+                    <!-- Added Career Goal -->
+                    <p>
+                        My career goal is to join a data-driven team where I can tackle complex problems, contribute to business strategy, and continuously grow my skills in an environment that values curiosity and impact.
+                    </p>
+
+                    <hr class="border-blue-100 my-8"> <!-- A separator -->
+
+                    <!-- New Sub-heading for Hobbies -->
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-3">
+                        <i data-lucide="gamepad-2" class="w-5 h-5 mr-2 text-blue-600"></i>
+                        Beyond the Dashboard
+                    </h3>
+                    <p>
+                        When I'm not writing SQL queries or refining Tableau dashboards, you can often find me unwinding with complex <strong>strategy games</strong> or <strong>hiking</strong> the local trails.
+                    </p>
+                    <p class="italic text-gray-600 text-base">
+                        I believe that diverse interests fuel creativity. The strategic, pattern-finding mindset from gaming and the mental clarity from hiking are skills I bring directly to my data work, helping me see problems from new angles.
                     </p>
                 </div>
 
-                <!-- Skills Chips -->
+                <!-- Skills Chips (Unchanged) -->
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i data-lucide="tool" class="w-5 h-5 mr-2 text-blue-600"></i>
@@ -151,6 +192,8 @@
             </div>
         </div>
     </section>
+    <!-- === End of Updated Section === -->
+
 
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
@@ -160,10 +203,10 @@
             <div class="grid gap-12 max-w-5xl mx-auto">
 
                 <!-- Project 1: Zomato Market Strategy Analysis -->
-                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row">
+                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row overflow-hidden"> <!-- Added overflow-hidden -->
                     <!-- Project Visual - Using uploaded zomato.jpg -->
-                    <div class="md:w-2/5 bg-gray-100 min-h-[250px] flex items-center justify-center p-0 md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none overflow-hidden">
-                        <img src="image/zomato.png" alt="Zomato Analysis Visual" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/2563eb/ffffff?text=Zomato+Analysis';" >
+                    <div class="md:w-2/5 min-h-[250px] flex items-center justify-center">
+                        <img src="image/zomato.png" alt="Zomato Analysis Dashboard Snippet" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/2563eb/ffffff?text=Zomato+Analysis';" >
                     </div>
                     <!-- Project Content -->
                     <div class="p-8 md:w-3/5 flex flex-col justify-between">
@@ -173,29 +216,27 @@
                                 <i data-lucide="code" class="w-4 h-4 inline mr-1"></i>
                                 Python • Pandas • Seaborn • Market Analysis
                             </p>
+                            <!-- (UPDATED) Project Description with "Challenges" -->
                             <div class="space-y-3 text-gray-700 mb-6">
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Identifying the key drivers of restaurant success (high ratings/volume) in a crowded market to inform new investment strategies.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Cleaned and analyzed a dataset of 7,000+ restaurants. Engineered a 'Cuisine Count' feature to test if specialization correlates with ratings. Used regex for advanced text cleaning.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="wrench" class="w-4 h-4 mr-1 text-yellow-500"></i> The Challenge:</strong> The raw dataset was inconsistent, with messy text in 'cuisine' and 'cost' fields. This required advanced regex and data transformation to make it usable for analysis.</p>
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Discovered that specialized restaurants (1-2 cuisines) rate <strong>15% higher</strong> than generalists. Identified "Online Ordering" as a critical success factor, recommending it as a mandatory feature for new entrants.</p>
                             </div>
                         </div>
-                        <div class="flex space-x-4 pt-4">
+                        <div class="flex space-x-4 pt-4 flex-wrap gap-y-2">
                             <a href="https://github.com/sreekarnati/Zomato_Restaurant_Analysis_EDA" target="_blank" class="btn-outline px-6 py-2 rounded-lg font-medium flex items-center">
                                 <i data-lucide="github" class="w-4 h-4 mr-2"></i>
                                 View Code & Notebook
-                            </a>
-                             <a href="#insights" onclick="alert('The Zomato analysis provided actionable insights on specialization and online presence.')" class="text-blue-600 hover:underline flex items-center text-sm font-semibold ml-2">
-                                <i data-lucide="info" class="w-4 h-4 mr-1"></i> Key Insights
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Superstore Profitability Dashboard -->
-                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row-reverse">
+                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row-reverse overflow-hidden">
                     <!-- Project Visual - Using uploaded superstore.jpg -->
-                    <div class="md:w-2/5 bg-gray-100 min-h-[250px] flex items-center justify-center p-0 md:rounded-r-2xl rounded-t-2xl md:rounded-tl-none overflow-hidden">
-                        <img src="image/superstore.png" alt="Superstore Dashboard Visual" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/10b981/ffffff?text=Superstore+Dashboard';" >
+                    <div class="md:w-2/5 min-h-[250px] flex items-center justify-center">
+                        <img src="image/superstore.png" alt="Superstore Profitability Dashboard" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/10b981/ffffff?text=Superstore+Dashboard';" >
                     </div>
                     <!-- Project Content -->
                     <div class="p-8 md:w-3/5 flex flex-col justify-between">
@@ -205,13 +246,14 @@
                                 <i data-lucide="bar-chart-3" class="w-4 h-4 inline mr-1"></i>
                                 Tableau • Business Intelligence • Profit Audit
                             </p>
+                            <!-- (UPDATED) Project Description -->
                             <div class="space-y-3 text-gray-700 mb-6">
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Sales were growing, but overall profit was stagnant. Management needed immediate insight into the profit leak.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Built an interactive, drill-down Tableau dashboard to audit profit margins by region and product. Created calculated fields to measure discount effectiveness.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Sales were growing, but overall profit was stagnant. Management needed immediate insight into the profit leak without digging through spreadsheets.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Built an interactive, drill-down Tableau dashboard to audit profit margins by region and product. Created calculated fields to measure discount effectiveness and a parameter to toggle views.</p>
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Pinpointed <strong>Texas and Pennsylvania</strong> as major loss centers due to high discounts on 'Tables'. Recommended a localized pricing strategy estimated to recover <strong>10% of lost profits</strong> annually.</p>
                             </div>
                         </div>
-                        <div class="flex space-x-4 pt-4">
+                        <div class="flex space-x-4 pt-4 flex-wrap gap-y-2">
                             <a href="https://public.tableau.com/app/profile/sree.vaishnav.karnati/viz/SuperstoreProfitSalesAnalysis_17636556003760/SuperstoreSalesDashboard?publish=yes" target="_blank" class="btn-primary px-6 py-2 rounded-lg font-medium flex items-center">
                                 <i data-lucide="eye" class="w-4 h-4 mr-2"></i>
                                 Live Dashboard
@@ -225,10 +267,10 @@
                 </div>
 
                 <!-- Project 3: Walmart Weekly Sales Forecasting -->
-                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row">
+                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row overflow-hidden">
                     <!-- Project Visual - Using uploaded walmart.jpg -->
-                    <div class="md:w-2/5 bg-gray-100 min-h-[250px] flex items-center justify-center p-0 md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none overflow-hidden">
-                        <img src="image/walmart.png" alt="Walmart Forecast Visual" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f97316/ffffff?text=Walmart+Forecast';" >
+                    <div class="md:w-2/5 min-h-[250px] flex items-center justify-center">
+                        <img src="image/walmart.png" alt="Walmart Sales Forecast Chart" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f97316/ffffff?text=Walmart+Forecast';" >
                     </div>
                     <!-- Project Content -->
                     <div class="p-8 md:w-3/5 flex flex-col justify-between">
@@ -238,13 +280,14 @@
                                 <i data-lucide="clock" class="w-4 h-4 inline mr-1"></i>
                                 Python • Prophet • Time-Series • Inventory Planning
                             </p>
+                            <!-- (UPDATED) Project Description -->
                             <div class="space-y-3 text-gray-700 mb-6">
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Inaccurate inventory planning due to complex seasonal sales spikes (especially around holidays) leading to either stockouts or high holding costs.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Applied the Facebook Prophet model to automatically capture weekly, yearly, and holiday seasonality. Engineered features for external economic factors like CPI.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Developed a model that accurately predicts sales peaks, enabling store managers to optimize stock levels and potentially reducing holding costs by improving order lead times.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="wrench" class="w-4 h-4 mr-1 text-yellow-500"></i> The Challenge:</strong> Traditional models struggled to parse multiple seasonalities (weekly, yearly, holiday). External factors like CPI and unemployment also impacted sales, requiring feature engineering.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Developed a model using Facebook Prophet that accurately predicts sales peaks, enabling store managers to optimize stock levels and potentially reducing holding costs by improving order lead times.</p>
                             </div>
                         </div>
-                        <div class="flex space-x-4 pt-4">
+                        <div class="flex space-x-4 pt-4 flex-wrap gap-y-2">
                             <a href="https://github.com/sreekarnati/Walmart_sales_Forecasting" target="_blank" class="btn-outline px-6 py-2 rounded-lg font-medium flex items-center">
                                 <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
                                 View Notebook
@@ -254,26 +297,27 @@
                 </div>
 
                 <!-- Project 4: Titanic Survival Analysis -->
-                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row-reverse">
+                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row-reverse overflow-hidden">
                     <!-- Project Visual - Using uploaded titanic.jpg -->
-                    <div class="md:w-2/5 bg-gray-100 min-h-[250px] flex items-center justify-center p-0 md:rounded-r-2xl rounded-t-2xl md:rounded-tl-none overflow-hidden">
-                        <img src="image/titanic.png" alt="Titanic Analysis Visual" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/6366f1/ffffff?text=Titanic+Analysis';" >
+                    <div class="md:w-2/5 min-h-[250px] flex items-center justify-center">
+                        <img src="image/titanic.png" alt="Titanic Survival Analysis Chart" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/6366f1/ffffff?text=Titanic+Analysis';" >
                     </div>
                     <!-- Project Content -->
                     <div class="p-8 md:w-3/5 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2 text-gray-800">Titanic Survival Analysis</h3>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">Titanic Survival Analysis (EDA)</h3>
                             <p class="text-sm text-blue-600 font-semibold mb-4">
                                 <i data-lucide="users" class="w-4 h-4 inline mr-1"></i>
-                                Python • Pandas • Statistical Inference
+                                Python • Pandas • Seaborn • Statistical Inference
                             </p>
+                            <!-- (UPDATED) Project Description -->
                             <div class="space-y-3 text-gray-700 mb-6">
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Quantify the socio-economic factors that determined survival rates on the Titanic, identifying if specific demographics were systematically favored.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Performed extensive data imputation for missing age values based on passenger class. Used Seaborn to visualize survival rates by gender, class, and fare.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Confirmed statistically significant correlations: <strong>Females had a 74% survival rate</strong> vs. 19% for males. Demonstrated foundational skills in data cleaning, imputation, and using visualization for evidence-based conclusions.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="wrench" class="w-4 h-4 mr-1 text-yellow-500"></i> The Challenge:</strong> A significant portion of 'Age' data was missing, which could skew the analysis. I had to develop a logical imputation strategy based on passenger class and title (e.g., 'Master').</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Confirmed statistically significant correlations: <strong>Females had a 74% survival rate</strong> vs. 19% for males. This project demonstrated foundational skills in data cleaning, imputation, and using visualization for evidence-based conclusions.</p>
                             </div>
                         </div>
-                        <div class="flex space-x-4 pt-4">
+                        <div class="flex space-x-4 pt-4 flex-wrap gap-y-2">
                             <a href="https://github.com/sreekarnati/Titanic_EDA" target="_blank" class="btn-outline px-6 py-2 rounded-lg font-medium flex items-center">
                                 <i data-lucide="github" class="w-4 h-4 mr-2"></i>
                                 View Code
@@ -283,26 +327,27 @@
                 </div>
                 
                 <!-- Project 5: Netflix Content Trends Analysis -->
-                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row">
+                <div class="project-card bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col md:flex-row overflow-hidden">
                     <!-- Project Visual - Using uploaded netflix.jpg -->
-                     <div class="md:w-2/5 bg-gray-100 min-h-[250px] flex items-center justify-center p-0 md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none overflow-hidden">
-                        <img src="image/netflix.png" alt="Netflix Analysis Visual" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e11d48/ffffff?text=Netflix+Trends';" >
+                     <div class="md:w-2/5 min-h-[250px] flex items-center justify-center">
+                        <img src="image/netflix.png" alt="Netflix Content Analysis Chart" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e11d48/ffffff?text=Netflix+Trends';" >
                     </div>
                     <!-- Project Content -->
                     <div class="p-8 md:w-3/5 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2 text-gray-800">Netflix Content Trends Analysis</h3>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800">Netflix Content Trends Analysis (EDA)</h3>
                             <p class="text-sm text-blue-600 font-semibold mb-4">
                                 <i data-lucide="film" class="w-4 h-4 inline mr-1"></i>
                                 Python • Pandas • Categorical Data Analysis
                             </p>
+                            <!-- (UPDATED) Project Description -->
                             <div class="space-y-3 text-gray-700 mb-6">
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="alert-triangle" class="w-4 h-4 mr-1 text-red-500"></i> The Problem:</strong> Analyze Netflix's content investment strategy by tracking library composition, genre popularity, and regional production over time.</p>
-                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="cpu" class="w-4 h-4 mr-1 text-green-500"></i> My Approach:</strong> Cleaned and transformed complex categorical data (nested genres, countries) to create quantifiable metrics for visualization. Analyzed year-over-year content volume and regional distribution.</p>
+                                <p><strong class="text-gray-900 flex items-center"><i data-lucide="wrench" class="w-4 h-4 mr-1 text-yellow-500"></i> The Challenge:</strong> Data in columns like 'cast' and 'listed_in' was nested and unstructured, requiring string splitting and list expansion (exploding) to properly analyze individual genres and actors.</p>
                                 <p><strong class="text-gray-900 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1 text-blue-600"></i> The Impact:</strong> Revealed a strategic shift toward <strong>non-US/international content</strong> and confirmed the dominance of Drama/Comedy genres. Provided insights for content strategists on global investment prioritization.</p>
                             </div>
                         </div>
-                        <div class="flex space-x-4 pt-4">
+                        <div class="flex space-x-4 pt-4 flex-wrap gap-y-2">
                             <a href="https://github.com/sreekarnati/Netflix_Shows_EDA" target="_blank" class="btn-outline px-6 py-2 rounded-lg font-medium flex items-center">
                                 <i data-lucide="github" class="w-4 h-4 mr-2"></i>
                                 View Code
@@ -322,17 +367,24 @@
             <p class="text-lg text-gray-600 mb-10">
                 I am currently open to full-time Data Analyst opportunities. If you're looking for someone who can not only analyze data but also clearly communicate the "so what," I'd love to chat about your team's challenges.
             </p>
-            <a href="mailto:vaishnavkarnati@gmail.com" class="btn-primary px-10 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-3xl transition transform hover:scale-[1.05] inline-block">
-                <i data-lucide="mail" class="w-5 h-5 inline mr-2"></i>
-                Get In Touch
-            </a>
+            <!-- (UPDATED) Contact Buttons Container -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:vaishnavkarnati@gmail.com" class="btn-primary px-10 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-3xl transition transform hover:scale-[1.05] inline-block w-full sm:w-auto">
+                    <i data-lucide="mail" class="w-5 h-5 inline mr-2"></i>
+                    Get In Touch (Email)
+                </a>
+                <a href="https://www.linkedin.com/in/sreekarnati" target="_blank" class="btn-outline px-10 py-4 rounded-xl text-lg font-semibold transition transform hover:scale-[1.05] inline-block w-full sm:w-auto bg-white"> <!-- Added bg-white for outline button -->
+                    <i data-lucide="linkedin" class="w-5 h-5 inline mr-2"></i>
+                    Message on LinkedIn
+                </a>
+            </div>
             
             <div class="mt-12 flex justify-center space-x-8">
                 <!-- Social Icons in Footer -->
-                <a href="https://www.linkedin.com/in/sreekarnati" class="text-gray-500 hover:text-blue-600 transition text-3xl hover:scale-110">
+                <a href="https://www.linkedin.com/in/sreekarnati" class="text-gray-500 hover:text-blue-600 transition text-3xl hover:scale-110" aria-label="LinkedIn Profile">
                     <i data-lucide="linkedin"></i>
                 </a>
-                <a href="https://github.com/sreekarnati" class="text-gray-500 hover:text-gray-900 transition text-3xl hover:scale-110">
+                <a href="https://github.com/sreekarnati" class="text-gray-500 hover:text-gray-900 transition text-3xl hover:scale-110" aria-label="GitHub Profile">
                     <i data-lucide="github"></i>
                 </a>
             </div>
@@ -344,6 +396,29 @@
     <!-- Script to render Lucide icons -->
     <script>
         lucide.createIcons();
+
+        // Basic Mobile Menu Toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('-translate-y-full');
+            if (isHidden) {
+                mobileMenu.classList.remove('-translate-y-full', '-z-10', 'opacity-0');
+                mobileMenu.classList.add('translate-y-0', 'z-40', 'opacity-100');
+            } else {
+                mobileMenu.classList.add('-translate-y-full', '-z-10', 'opacity-0');
+                mobileMenu.classList.remove('translate-y-0', 'z-40', 'opacity-100');
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-y-full', '-z-10', 'opacity-0');
+                mobileMenu.classList.remove('translate-y-0', 'z-40', 'opacity-100');
+            });
+        });
     </script>
 </body>
 </html>
